@@ -1,0 +1,34 @@
+@import "variable";
+
+@mixin font-face($weight: null, $name: null) {
+    @font-face {
+        font-family: 'Poppins';
+        font-weight: $weight;
+        src: url('#{$font-path}#{$name}.woff') format('woff');
+    }
+}
+
+@mixin font($color: null, $size: null, $weight: null, $line: null) {
+    color: $color;
+    font-size: ($size)+px;
+    font-weight: $weight;
+    line-height: ($line)+px;
+}
+
+@mixin media1300 {
+    @media (max-width: $screen-1300) {
+        @content;
+    }
+}
+
+@mixin media767 {
+    @media (max-width: $screen-767) {
+        @content;
+    }
+}
+
+@mixin media575 {
+    @media (max-width: $screen-575) {
+        @content;
+    }
+}

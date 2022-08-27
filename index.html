@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="css/jquery-ui.css" rel="stylesheet">
+        <link href="css/foundation.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+
+<body>
+    <div class="container">
+        <div class="logo_section">
+            <img src='img/artoon.png'>
+        </div>
+        <div class="preview_section">
+            <div class="preview_form">
+                Preview Form
+                <label class="switch">
+                    <input type="checkbox"  disabled= "disabled">
+                    <span class="slider round"></span>
+                </label>
+                <div class="back_home">
+                    <img src='img/home.png'>
+                    Back to Home
+                </div>
+            </div>
+        </div>
+        <div class="form-sections">
+            <div class="form-heading">
+                <h1>Jquery Form Builder</h1>
+            </div>
+            <div class="table-drop ui-widget-header" id="droppable">
+            </div>
+            <p class="err_message"> </p>
+            <p class="s_message"> </p>
+            <div class="submit">
+                <button class="submit-btn" disabled>submit</button>
+            </div>
+        </div>
+        <!-- onclick="closeNav()" -->
+
+        <div id="" class="sidenav">
+            <a href="#" class="closebtn">&times;</a>
+            <div class="user_section">
+                <div class="user_logo">
+                    <img src="img/user.png">
+                </div>
+                <div class="user_detail">
+                    <h3 class="user_name">unknown user</h3>
+                    <p class="user_id"> abc@gmail.com</p>
+                </div>
+            </div>
+            <ul>
+                <li id="draggable2" class="ui-widget-content">
+                    <a href="#"><span><i class="fa fa-table" aria-hidden="true"></i></span>Input Table</a>
+                </li>
+            </ul>
+        </div>
+        <!-- onclick="closeNavs()" -->
+        <div id="" class="sidenavs">
+            <a href="#" class="closebtn">&times;</a>
+            <ul>
+                <li>
+                    <div class="head">Input table Properties</div>
+                </li>
+                <li class="category">
+                    <ul class="tabs">
+                        <li class="active" id="tab1">General </li>
+                        <li id="tab2">Fields</li>
+                        <li id="tab3">Options</li>
+                        <li id="tab4">Advanced</li>
+                    </ul>
+                    <div class="clear"></div>
+                    <div class="content">
+                        <div class="list active" data-tab="tab1">
+                            <div class="input-form-name">
+                                <h6>Question Text</h6>
+                                <input type="text" placeholder="" class="table_ti">
+                            </div>
+                            <div class="required select_require">
+                                <h6 class="requir">Required</h6>
+                                <select name="requirements">
+                                    <option value="No">No</option>
+                                    <option value="Require an answer on Every row">Require an answer on Every row
+                                    </option>
+                                    <option value="Require at least one answer">Require at least one answer</option>
+                                    <option value="Require an answer in every cell">Require an answer in every cell
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="list" data-tab="tab2">
+                            <div class="input-type">
+                                <h6>
+                                    Input Type
+                                </h6>
+                                <div class="in-type">
+                                    <a class="in-box radio-box-sec">
+                                        <img src="img/radio.png">
+                                        <h5>Radio Button</h5>
+                                    </a>
+                                    <a class="in-box check-box-sec">
+                                        <img src="img/checkbox.png">
+                                        <h5>Checkbox Button</h5>
+                                    </a>
+                                    <a class="in-box drop-down-sec">
+                                        <img src="img/dropdown.png">
+                                        <h5>Dropdown Button</h5>
+                                    </a>
+                                    <a class="in-box text-btn-sec">
+                                        <img src="img/texts.png">
+                                        <h5>Text Button</h5>
+                                    </a>
+                                    <a class="in-box number-sec">
+                                        <img src="img/number.png">
+                                        <h5>Number Button</h5>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="rows">
+                                <h6>Rows</h6>
+                                <textarea placeholder="" value="">
+                                    <input type="text" value="hfewfhejfh">
+                                    <input type="text" value="hfewfhejfh">
+                                    <input type="text" value="hfewfhejfh">
+                                </textarea>
+                            </div>
+                            <div class="columns">
+                                <h6>Columns</h6>
+                                <textarea placeholder="" value=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <span class="add_element">
+            <span class="toggle_text">Add Element </span>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </span>
+
+
+    </div>
+
+
+
+</body>
+
+</html>

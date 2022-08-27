@@ -1,0 +1,12 @@
+@import "mixin";
+@import "variable";
+
+@include font-face(100,Poppins-Thin);
+@include font-face(200,Poppins-ExtraLight);
+@include font-face(300,Poppins-Light);
+@include font-face(400,Poppins-Regular);
+@include font-face(500,Poppins-Medium);
+@include font-face(600,Poppins-SemiBold);
+@include font-face(700,Poppins-Bold);
+@include font-face(800,Poppins-ExtraBold);
+@include font-face(900,Poppins-Black);

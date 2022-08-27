@@ -1,0 +1,635 @@
+@font-face {
+  font-family: "Poppins";
+  font-weight: 100;
+  src: url("../fonts/Poppins-Thin.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 200;
+  src: url("../fonts/Poppins-ExtraLight.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("../fonts/Poppins-Light.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url("../fonts/Poppins-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("../fonts/Poppins-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("../fonts/Poppins-SemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 700;
+  src: url("../fonts/Poppins-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 800;
+  src: url("../fonts/Poppins-ExtraBold.woff") format("woff");
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 900;
+  src: url("../fonts/Poppins-Black.woff") format("woff");
+}
+* {
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  margin: 0;
+}
+
+.input-type {
+  max-width: 100%;
+}
+
+:focus-visible {
+  outline: rgba(0, 0, 0, 0) auto 0px;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  min-height: 200px;
+  color: #000 !important;
+}
+
+h6 {
+  font-size: 20px;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+h5 {
+  font-size: 13px !important;
+  margin: 0;
+  font-weight: 400;
+}
+
+::placeholder {
+  color: black;
+}
+
+.changetheme {
+  background-color: #ff8118;
+  padding: 10px;
+}
+
+input[type=text] {
+  min-width: 50px !important;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.541);
+  background-color: rgba(109, 104, 104, 0);
+}
+
+input[type=number] {
+  min-width: 50px !important;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.541);
+  background-color: rgba(109, 104, 104, 0);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: #e8f0fe !important;
+  color: -internal-light-dark(black, white) !important;
+}
+
+.ui-widget-header {
+  background: #f6a72800 !important;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.container .preview_section {
+  background: linear-gradient(270deg, #FF6100 0%, #FFB841 99.97%);
+  height: 44px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.container .preview_section .preview_form {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 20px;
+  width: 100%;
+  color: #fff;
+  align-items: center;
+}
+.container .preview_section .preview_form .switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-left: 10px;
+}
+.container .preview_section .preview_form .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.container .preview_section .preview_form .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 35%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #A4E01F;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  height: 20px;
+  width: 45px;
+}
+.container .preview_section .preview_form .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: -6px;
+  bottom: -3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.container .preview_section .preview_form input:checked + .slider {
+  background-color: #fff;
+}
+.container .preview_section .preview_form input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+.container .preview_section .preview_form input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+.container .preview_section .preview_form .slider.round {
+  border-radius: 34px;
+}
+.container .preview_section .preview_form .slider.round:before {
+  border-radius: 50%;
+}
+.container .sidenavs {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #3e4652;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  transform: translateX(400px);
+}
+@media (max-width: 575px) {
+  .container .sidenavs {
+    width: 250px;
+  }
+}
+.container .sidenavs ul {
+  padding-left: 0;
+}
+.container .sidenavs ul li .head {
+  color: white;
+  border-bottom: none;
+  font-weight: 400;
+  padding: 0 25px;
+  font-size: 20px;
+}
+.container .sidenavs ul .category {
+  padding-top: 20px !important;
+}
+.container .sidenavs ul .category .tabs {
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+@media (max-width: 575px) {
+  .container .sidenavs ul .category .tabs {
+    padding: 0 5px;
+  }
+}
+.container .sidenavs ul .category .tabs li {
+  cursor: pointer;
+  font-size: 15px;
+  padding: 0 5px;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 15px;
+  transition: 0.5s ease;
+  text-transform: uppercase;
+}
+@media (max-width: 575px) {
+  .container .sidenavs ul .category .tabs li {
+    font-size: 12px;
+    padding: 10px 3px;
+  }
+}
+.container .sidenavs ul .category .tabs li::after {
+  content: "";
+  position: absolute;
+  background-color: #FFFFFF;
+  opacity: 0;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  text-align: center;
+  transition: 1s ease;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container .sidenavs ul .category .tabs li:hover {
+  font-weight: 700;
+}
+.container .sidenavs ul .category .tabs li:hover::after {
+  content: "";
+  position: absolute;
+  background-color: #ff8118;
+  opacity: 1;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.container .sidenavs ul .category .clear {
+  clear: both;
+}
+.container .sidenavs ul .category .content {
+  text-decoration: none;
+  padding-left: none;
+  color: #fff;
+  border: none;
+  list-style-type: none;
+  padding: 50px 20px 25px 20px;
+  display: block;
+}
+@media (max-width: 575px) {
+  .container .sidenavs ul .category .content {
+    padding: 50px 0px 25px 0px;
+  }
+}
+.container .sidenavs ul .category .content .list {
+  font-size: 13px;
+  padding: 0 10px;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  padding-bottom: 15px;
+  transition: 0.5s ease;
+  display: none;
+}
+.container .sidenavs ul .category .content .list .input-form-name input[type=text] {
+  color: white;
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+.container .sidenavs ul .category .content .list .required {
+  padding-top: 30px;
+}
+.container .sidenavs ul .category .content .list .required .requir {
+  padding-bottom: 20px;
+}
+.container .sidenavs ul .category .content .list .required select {
+  -webkit-writing-mode: horizontal-tb !important;
+  width: 100%;
+  font-weight: 400;
+  font-size: 15px;
+  font-family: "poppins";
+  color: #000;
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  height: 50px;
+  position: relative;
+  border-color: -internal-light-dark(rgba(118, 118, 118, 0), rgba(133, 133, 133, 0));
+}
+.container .sidenavs ul .category .content .list .input-type h6 {
+  color: white;
+}
+.container .sidenavs ul .category .content .list .input-type .in-type {
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .sidenavs ul .category .content .list .input-type .in-type .in-box {
+  display: block;
+  width: 25%;
+  margin: 10px 10px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+@media (max-width: 575px) {
+  .container .sidenavs ul .category .content .list .input-type .in-type .in-box {
+    width: 40%;
+    margin: 10px 10px;
+  }
+}
+.container .sidenavs ul .category .content .list .input-type .in-type .in-box:hover {
+  background-color: #ff8118;
+  padding: 10px;
+}
+.container .sidenavs ul .category .content .list .input-type .in-type .in-box img {
+  width: 100%;
+}
+.container .sidenavs ul .category .content .list .input-type .in-type .in-box h5 {
+  text-align: center;
+}
+.container .sidenavs ul .category .content .list .rows {
+  padding-top: 25px;
+}
+.container .sidenavs ul .category .content .list.active {
+  display: block;
+}
+.container .sidenavs ul .category .content .list.hide {
+  display: none;
+}
+.container .sidenavs ul .category .content .activelink {
+  color: red;
+}
+.container .sidenavs .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 575px) {
+  .container .sidenavs {
+    padding-top: 15px;
+  }
+  .container .sidenavs a {
+    font-size: 18px;
+  }
+}
+.container .form-sections {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: white;
+  box-shadow: 0 0 10px #000;
+  position: relative;
+  padding-bottom: 20px;
+}
+.container .form-sections .form-heading {
+  padding: 25px 20px;
+}
+.container .form-sections .form-heading input[type=text] {
+  padding-bottom: 50px;
+  background-color: #fff;
+}
+.container .form-sections .table-drop {
+  width: 90%;
+  min-height: 300px;
+  border: 2px dotted rgba(0, 0, 0, 0.479);
+  margin: 10px auto;
+}
+.container .sidenav {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #3e4652;
+  transition: 0.5s;
+  padding-top: 60px;
+  transform: translateX(-400px);
+}
+@media (max-width: 575px) {
+  .container .sidenav {
+    width: 250px;
+  }
+}
+.container .sidenav ul {
+  padding-left: 0;
+}
+.container .sidenav ul li a {
+  padding: 8px 8px 8px 20px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+  background-color: #000;
+}
+@media (max-width: 575px) {
+  .container .sidenav ul li a {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+}
+.container .sidenav ul li a:hover {
+  color: #f1f1f1c0;
+}
+.container .sidenav ul li a span {
+  padding-right: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.685);
+}
+@media (max-width: 575px) {
+  .container .sidenav ul li a span {
+    padding-right: 10px;
+  }
+}
+.container .sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #fff;
+  text-decoration: none;
+}
+@media (max-width: 575px) {
+  .container .sidenav .closebtn {
+    top: -10px;
+    right: 10px;
+  }
+}
+@media (max-width: 575px) {
+  .container .sidenav {
+    padding-top: 15px;
+  }
+  .container .sidenav a {
+    font-size: 18px;
+  }
+}
+.container .add_element {
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 10px 20px 10px 10px;
+  position: absolute;
+  left: 0;
+  top: 19%;
+}
+
+.forms-sect {
+  position: relative;
+}
+.forms-sect .add_elements {
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 10px 20px 10px 10px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transition: 0.5s ease;
+  width: 30px;
+  display: flex;
+  align-items: center;
+}
+.forms-sect .add_elements .hidden-element {
+  padding-left: 10px;
+  display: none;
+}
+.forms-sect .add_elements:hover {
+  width: 125px;
+  opacity: 1;
+}
+.forms-sect .add_elements:hover .hidden-element {
+  display: flex;
+}
+.forms-sect .form-section {
+  padding-top: 25px;
+  overflow: auto;
+  color: #000;
+}
+.forms-sect .form-section .table_title {
+  display: block;
+  width: 100%;
+}
+.forms-sect .form-section .table_title input[type=text] {
+  width: 100%;
+}
+.forms-sect .form-section .form-sec {
+  max-width: 500px;
+}
+.forms-sect .form-section .form-sec thead tr:last-child {
+  background-color: rgba(255, 255, 255, 0);
+}
+.forms-sect .form-section .form-sec thead tr:last-child td {
+  color: #000;
+}
+.forms-sect .form-section .form-sec thead tr th {
+  position: relative;
+  padding: 20px 20px 20px 10px !important;
+  background-color: rgba(73, 64, 64, 0.294);
+  padding: 20px;
+}
+.forms-sect .form-section .form-sec thead tr th .close-btns {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  cursor: pointer;
+}
+.forms-sect .form-section .form-sec thead tr th:first-child {
+  background-color: rgba(73, 64, 64, 0);
+}
+.forms-sect .form-section .form-sec thead tr th:last-child {
+  background-color: rgba(73, 64, 64, 0);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+.forms-sect .form-section .form-sec thead tr .add_section {
+  writing-mode: vertical-rl !important;
+  text-orientation: mixed !important;
+  background: rgba(255, 255, 255, 0) !important;
+  padding: 0;
+}
+.forms-sect .form-section .form-sec thead tr .add_section .add_sec {
+  position: absolute;
+  top: -21px;
+  left: 13px;
+  cursor: pointer;
+  transform: translateX(-35%) translateY(90%) rotate(90deg);
+  writing-mode: vertical-rl !important;
+  text-orientation: mixed !important;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+}
+.forms-sect .form-section .form-sec tbody tr:nth-child(2) {
+  border-radius: 20px;
+}
+.forms-sect .form-section .form-sec tbody tr td {
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  padding: 20px 35px 20px 10px;
+}
+.forms-sect .form-section .form-sec tbody tr td:first-child {
+  background-color: rgba(73, 64, 64, 0.294);
+  text-align: left;
+}
+.forms-sect .form-section .form-sec tbody tr td:first-child .input-type {
+  max-width: 100%;
+}
+.forms-sect .form-section .form-sec tbody tr td:first-child .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 5px;
+  cursor: pointer;
+}
+.forms-sect .form-section .form-sec tbody tr:last-child .add_section_row {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 0;
+}
+.forms-sect .form-section .form-sec tbody tr:last-child .add_section_row .add_sec_row {
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+}
+
+/*# sourceMappingURL=syle.css.map */
